@@ -35,9 +35,9 @@ class Config {
 const config: Config = new Config();
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME || "default_database_name",
-    process.env.DB_USER || 'default_user',
-    process.env.DB_PASSWORD || 'default_password',
+    process.env.DB_NAME || "debtowner",
+    process.env.DB_USER || 'ddthanh',
+    process.env.DB_PASSWORD || '123456',
     {
         host: process.env.DB_HOST || 'localhost',
         dialect: 'mysql',
@@ -50,7 +50,7 @@ async function databaseConnection(): Promise<void> {
         await sequelize.authenticate();
         console.log("Connection to Mysql Database Successfully.")
     } catch (error) {
-        console.log("databaseConnection", error)
+        console.log("databaseConnection")
     }
 }
 

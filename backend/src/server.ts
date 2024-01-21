@@ -49,7 +49,6 @@ function standardMiddleware(app: Application): void {
 }
 
 function routesMiddleware(app: Application): void {
-    console.log(app);
     appRoutes(app);
 }
 
